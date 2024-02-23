@@ -1,0 +1,432 @@
+body,
+ul,
+li {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+#favicon2 {
+    width: 100%;
+    height: auto;
+}
+.btn {
+    color: white;
+    font-size: 1em;
+    background-color: #04AA6D;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #048153;
+}
+.input-box {
+    font-size: 1em;
+}
+.nav-top {
+    background-color: orange;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    width: 100%;
+    font-weight: 300;
+    opacity: 100%;
+}
+
+.nav-right {
+    width: 45%;
+    position: absolute;
+    float: right;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.nav-a {
+    width: 10%;
+    height: auto;
+    float: right;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 5px solid transparent;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+.section {
+    height: 100%;
+}
+.section h1 {
+    margin-left: 1%;
+}
+#logo {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin: 5px;
+}
+
+#favicon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+#favicon2 {
+    width: 15%;
+    height: 15%;
+    margin: 0 auto;
+}
+
+.home {
+    width: 100%;
+}
+
+.container {
+    border-top: 10px solid black;
+    text-align: center;
+    height: 100%;
+    font-size: 1.5em;
+}
+
+.home-area {
+    width: 70%;
+    margin: 2% auto;
+}
+
+.regiester-window {
+    margin: 0 auto;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: darkgray;
+}
+.btn-close {
+    cursor: pointer;
+}
+.form-input-box {
+    margin: 0 auto;
+    width: 70%;
+    height: 20%;
+    border: none;
+    margin-bottom: 5%;
+    /* font-size: 20px; */
+}
+
+.form-submit {
+    margin: 0 auto;
+    width: 40%;
+    /* font-size: 20px; */
+    margin-bottom: 2%;
+
+}
+
+.form-area {
+    margin: 10% auto;
+    width: 90%;
+}
+
+.form-input-area {
+    padding-top: 10%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
+
+.form-input-box-title {
+    padding-left: 15%;
+    /* font-size: 25px; */
+    letter-spacing: 1px;
+    margin: 0 0;
+    margin-bottom: 1%;
+    font-weight: normal;
+    text-align: left;
+}
+
+#register_message {
+    padding-bottom: 3%;
+}
+
+#login_message {
+    padding-bottom: 3%;
+}
+
+#Password {
+    margin-bottom: 1%;
+}
+
+#loginPassword {
+    margin-bottom: 1%;
+}
+
+.form-checkbox-area {
+    transform: translateX(19.3%);
+    /* font-size: 15px; */
+}
+
+.login-window {
+    margin: 0 auto;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: darkgray;
+}
+
+.login-state {
+    position: absolute;
+    right: 50%;
+    bottom: 0.5%;
+    font-size: 1.25em;
+    display: none;
+}
+
+.logout-buttom {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.book-container {
+    text-align: left;
+}
+
+.book-container h3 {
+    margin-top: 2%;
+    margin-bottom: 0%;
+    /* font-size: 18px; */
+    margin-left: 1%;
+}
+
+.book-container p {
+    margin-top: 0.5%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+
+.comment-input-area {
+    background-color: darkgray;
+    width: 75%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.comment-input-comment-limit {
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.comment-input-comment {
+    width: 95%;
+    height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 70%;
+    min-height: 70%;
+    background-color: white;
+    overflow: auto;
+    resize: both;
+    margin: 0 auto;
+    /* font-size: 15px; */
+}
+.name-input-area {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.comment-input-p {
+    float: left;
+    margin-right: 5%;
+}
+.comment-input-name{
+    float: left;
+    margin-right: 3%;
+    width: 70%;
+    margin-bottom: 1%
+}
+.comment-input-submit {
+    float: left;
+    
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+.comments {
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+.comments p{
+    padding-top: 0.5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 1%;
+}
+
+.search-input {
+    margin-top: 2%;
+    width: 80%;
+    height: 10%;
+    background-color: darkgray;
+    color: white;
+    /* font-size: 20px; */
+
+}
+
+.search-input::placeholder  {
+    color: white;
+}
+
+.items_container {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 100%;
+}
+
+.item-container {
+    width: 95%;
+    height: 300px;
+    padding: 1% 1%;
+    margin: 0 auto;
+}
+.item-image {
+    margin-top: 2%;
+    float: left;
+    width: 15%;
+    height: auto;
+    padding: 1% 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.item-text {
+    padding-top: 2%;
+    float: left;
+    width: 60%;
+    text-align: left;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+.shop-hr {
+    margin-top: 2%;
+    border: 5px solid black;
+}
+
+.popout-background {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 98;
+}
+
+.popout-message {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    width: 80%;
+    height: 10%;
+    top: 20%;
+    left: 10%;
+    opacity: 80%;
+    background-color: black;
+    font-size: 1.5em;
+    z-index: 100;
+    color: white;
+    padding: 2%;
+}
+
+.chess-container {
+    padding-top: 5%;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 6px solid grey;
+}
+
+table.center {
+    margin:auto;
+    margin-bottom: 2%;
+  }
+
+.tr-color1 {
+    background-color:white;
+    border: 3px solid white;
+}
+
+.tr-color2 {
+    background-color:lightblue;
+    border: 3px solid lightblue;
+}
+
+.tr-color3 {
+    background-color: rgb(226, 149, 149);
+    border: 3px dotted gray;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+}
+
+td img {
+    width: 40px;
+    height: 40px;
+}
+
+.description-area {
+    width: 98%;
+    margin: 1% auto;
+    font-size: 1em;
+    border: 0.5px solid black;
+    background-color: lightyellow;
+}
+
+.match-area {
+    width: 98%;
+    margin: 1% auto;
+    font-size: 1em;
+    text-align: left;
+}
+
+.quit-btn {
+    background-color: red;
+    display: none;
+}
+
+.quit-btn:hover {
+    background-color: rgb(159, 0, 0);
+
+}
+
+#match_message {
+    text-align: left;
+    margin-left: 1%;
+}
+
+.reset-area {
+    width: 98%;
+    margin: 1% auto;
+    font-size: 1em;
+    text-align: left;
+    display: none;
+}

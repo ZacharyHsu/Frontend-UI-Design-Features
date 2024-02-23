@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The Game Academy</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="yhsu573.css" />
+    <script type="text/javascript" src="yhsu573.js"></script>
+</head>
+
+<body>
+
+
+    <div class="nav-top" id="myNavbar">
+        <img id="logo">
+        <!-- Right-sided navbar links -->
+        <div class="nav-right ">
+            <a id="nav_chess" class=" nav-a " onclick="showSelected('chess', 'nav_chess');">&#x265A</a>
+            <a id="nav_book" class=" nav-a " onclick="showSelected('book', 'nav_book' );">&#x1F4D6</a>
+            <a id="nav_shop" class=" nav-a " onclick="showSelected('shop', 'nav_shop');">&#x1F6D2</a>
+            <a id="nav_register" class=" nav-a " onclick="showSelected('register', 'nav_register');">&#x270D</a>
+            <a id="nav_login" class=" nav-a " onclick="showSelected('login', 'nav_login');">&#x1F469</a>
+            <a id="nav_home" class="nav-a " onclick="showSelected('home', 'nav_home');">&#x1F3E0</a>
+        </div>
+        <a class="login-state" id="loginState"></a>
+    </div>
+
+    <div id="home" class="section">
+        <h1>The Game Academy</h1>
+
+        <div class="container">
+            <div class="home-area">
+                <p>
+                    Welcome to The Game Academy, the website provides different
+                    functionality for users. Users can register an account, login to an
+                    account, purchase products, view comments or play a chess game with
+                    another user.
+                </p>
+                <img id="favicon">
+                <br/>
+                <a id="version">&#169; All rights reserved. </a>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="login" class="section">
+        <h1>Login</h1>
+
+        <div class="container">
+            <div class="login-window" id="register-form">
+                <div class="form-area">
+                    <div class="form-input-area" id="userDetails">
+                        <h3 class="form-input-box-title">Username:</h3>
+                        <input class="input-box form-input-box" type="text" id="loginUsername">
+                        <h3 class="form-input-box-title">Password:</h3>
+                        <input class="input-box form-input-box" type="password" id="loginPassword">
+                        <div class="form-checkbox-area">
+                            <input type="checkbox" onclick="toggleLoginPassword()">Show Password
+                        </div>
+                    </div>
+                    <button class="btn form-submit" onclick="submitLoginForm();">Login</button>
+                    <div id="login_message">Please Login to Continue.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popout-background" id="popout_back"></div>
+    <div class="popout-message" id="popout_message">
+        <button class="btn-close " onclick="closeMessage()">x</button>
+    </div>
+    <div id="register" class="section">
+        <h1>Register</h1>
+        <div class="container">
+            <div class="regiester-window" id="register-form">
+                <div class="form-area">
+                    <div class="form-input-area" id="userDetails">
+                        <h3 class="form-input-box-title">Username:</h3>
+                        <input class=" input-box form-input-box" type="text" id="Username">
+                        <h3 class="form-input-box-title">Password:</h3>
+                        <input class="input-box form-input-box" type="password" id="Password">
+                        <div class="form-checkbox-area">
+                            <input type="checkbox" onclick="toggleRegisterPassword()">Show Password
+                        </div>
+                        <h3 class="form-input-box-title">Address:</h3>
+                        <input class="input-box form-input-box" type="email" id="Address">
+                    </div>
+                    <button class=" btn form-submit" onclick="submitForm();">Submit</button>
+                    <div id="register_message">Please Register Here.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shop" class="section">
+        <h1>The Game Shop</h1>
+        <div class="container">
+            <input id="item_search" class=" input-box search-input" type="text" placeholder="Search for item">
+            <div id="items_container">
+                <!-- <div class="item-container">
+                    <img class="item-image" src="">
+                    <div class="item-text">
+                    <h3 class="item-name">Title</h3>
+                    <p class="item-description">DGT2010, the official chess clock of the World Chess Federation FIDE. The DGT2010 was introduced in 2007 and received the status of \"Official FIDE Chess Clock\" in June 2008 after tests by four top-level arbiters concluded that the clock is in full accordance with all FIDE rules and regulations.\nThe DGT2010 is suitable for use with many games and it has Japanese and Canadian Byo-yomi settings for the game Go or Baduk. Some features of the DGT2010 were changed in November 2010 to comply with popular timing systems.</p>
+                    <p class="item-price">$daf</p>
+                    <button class="item-button">Buy Now</button>
+                </div>
+                </div> -->
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="book" class="section">
+        <h1>Guest Book</h1>
+
+        <div class="container book-container">
+
+            <h3>Please Sign Our Guest Book.</h3>
+            <p>All commets are welcome. Please be respectful.</p>
+            <div class="comment-input-area">
+                <!-- <input class="comment-input-comment" type="text" id="comment" placeholder="Your comments here"> -->
+                <div class="comment-input-comment-limit">
+                    <textarea id="comment_comment" class="input-box comment-input-comment"
+                        placeholder="Your comments here"></textarea>
+                </div>
+                <div class="name-input-area">
+                    <p class="comment-input-p">Your Name:</p>
+                    <input class="input-box comment-input-name" type="text" id="comment_name"
+                        placeholder="Enter your name here">
+                    <button class=" btn comment-input-submit" onclick="postComment();">Post</button>
+
+                </div>
+
+            </div>
+            <h3>Recents Entries</h3>
+            <!-- <div id="comments_container" class="comments"></div> -->
+            <iframe id="comments_iframe" src="https://cws.auckland.ac.nz/gas/api/Comments" width="100%" height="450px" frameborder="0" ></iframe>
+
+        </div>
+    </div>
+    <div id="chess" class="section">
+        <h1>Game of Chess</h1>
+
+
+        <div class="container chess-container">
+            <table cellPadding="0" class="center" id = "chess_table">
+                <tbody>
+                    <tr>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color3">a</td>
+                        <td class="tr-color3">b</td>
+                        <td class="tr-color3">c</td>
+                        <td class="tr-color3">d</td>
+                        <td class="tr-color3">e</td>
+                        <td class="tr-color3">f</td>
+                        <td class="tr-color3">g</td>
+                        <td class="tr-color3">h</td>
+                        <td class="tr-color3" ondrop="bindrop(event)" ondragover="bindragover(event)" id="bin1"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">8</td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="nb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="bb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="qb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="kb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="bb2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="nb2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rb2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqb1" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">7</td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb3" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb4" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb5" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb6" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb7" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pb8" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqb2" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">6</td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqb3" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">5</td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqb4" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">4</td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqw4" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">3</td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqw3" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">2</td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw1" ondragstart="mydragstart(event)" type="image/svg+xml"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw3" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw4" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw5" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw6" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw7" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="pw8" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqw2" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3">1</td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rw1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="nw1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="bw1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="qw1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="kw1" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="bw2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color1" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="nw2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color2" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rw2" ondragstart="mydragstart(event)"></td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)"><img id="rqw1" ondragstart="mydragstart(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr-color3" ondrop="bindrop(event)" ondragover="bindragover(event)" id="bin2"></td>
+                        <td class="tr-color3">a</td>
+                        <td class="tr-color3">b</td>
+                        <td class="tr-color3">c</td>
+                        <td class="tr-color3">d</td>
+                        <td class="tr-color3">e</td>
+                        <td class="tr-color3">f</td>
+                        <td class="tr-color3">g</td>
+                        <td class="tr-color3">h</td>
+                        <td class="tr-color3" ondrop="mydrop(event)" ondragover="mydragover(event)""></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="description-area">
+                <p>To capture a piece of the opponent, move the piece to one of the bins (in the top-right or bottom-left), and move your piece to where the opponent's piece was. A piece moved to a bin can not be recovered.</p>
+                <p>To swap two pieces (e.g. as in castling), move one piece to the temporary hold (in the top-left or bottom-right), move the second piece to where the first piece was, and finally move the piece from the temporary hold to where the second piece was.</p>
+                <p>To promote a pawn to a queen when the pawn has reached the last rank, move it to the bin, and move a queen from the stock to where the pawn was. A queen cannot be restocked once it is moved from the stock.</p>
+            </div>
+
+            <div class="match-area">
+                <button id="main_button" class="btn " onclick="pairMe()">Try Game</button>
+                <button id="quit_button" class="btn quit-btn"onclick="quitGame()" class="btn" >Quit Game</button>
+            </div>
+            <p id="match_message">To start 'Try Game'.</p>
+            <div class="reset-area">
+                <button id="reset_button" class="btn" onclick="resetGame()">Reset Game</button>
+            </div>
+        
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>
