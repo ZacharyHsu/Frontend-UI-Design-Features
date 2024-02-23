@@ -1,4 +1,5 @@
 # Frontend-UI-Design-Features
+![alt text](https://github.com/ZacharyHsu/Frontend-UI-Design-Features/blob/main/showcase.jpg?raw=true)
  練習 JS 事件處理 :
 
 1.主要熟悉HTML/CSS/JS 相關語法
